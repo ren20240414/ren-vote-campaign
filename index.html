@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ff9f1c">
+  <meta name="description" content="わんわん総選挙 FINAL、蓮を応援してくれるみんなへ。ありがとうの気持ちを込めたプレゼント企画です。">
+  <title>蓮からありがとう！｜わんわん総選挙 FINAL 応援企画</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --orange: #ff9f1c; --orange-dark: #d96d00; --cream: #fff8e9;
+      --paper: #fffdf7; --ink: #3d2b20; --muted: #77675a; --pink: #ffb8a8;
+      --green: #dce9c9; --line: #ead8bd; --shadow: 0 12px 30px #6e43121a;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; color: var(--ink); background: var(--cream); font-family: "M PLUS Rounded 1c", sans-serif; line-height: 1.8; }
+    a { color: inherit; }
+    .topbar { background: var(--orange); text-align: center; padding: 8px 14px; font-size: .78rem; font-weight: 800; letter-spacing: .08em; }
+    .wrap { width: min(1080px, calc(100% - 32px)); margin: auto; }
+    .hero { position: relative; padding: 48px 0 62px; overflow: hidden; background: radial-gradient(circle at 5% 12%, #ffe2a5 0 7%, transparent 7.5%), radial-gradient(circle at 94% 18%, #ffd3c6 0 6%, transparent 6.5%), var(--cream); }
+    .hero-grid { display: grid; grid-template-columns: 1fr .92fr; align-items: center; gap: 42px; }
+    .eyebrow { display: inline-flex; gap: 8px; align-items: center; background: #fff; border: 2px solid var(--ink); border-radius: 999px; padding: 5px 13px; font-size: .78rem; font-weight: 800; transform: rotate(-2deg); box-shadow: 3px 4px 0 var(--orange); }
+    h1 { font-size: clamp(2.6rem, 6vw, 5.2rem); line-height: 1.1; margin: 22px 0 18px; letter-spacing: -.055em; }
+    h1 .orange { color: var(--orange-dark); display: inline-block; }
+    .lead { font-size: 1.03rem; max-width: 38em; }
+    .period { display: inline-block; margin-top: 14px; background: var(--ink); color: white; border-radius: 8px; padding: 8px 14px; font-size: .9rem; font-weight: 700; }
+    .hero-photo { position: relative; transform: rotate(2deg); background: white; padding: 12px 12px 44px; box-shadow: 0 16px 35px #4e321b30; border: 1px solid #eee1ce; }
+    .hero-photo img { width: 100%; display: block; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 36%; }
+    .photo-caption { position: absolute; bottom: 9px; left: 12px; right: 12px; text-align: center; font-family: "Kosugi Maru", sans-serif; font-size: 1rem; }
+    .sticker { position: absolute; display: grid; place-items: center; border: 2px solid var(--ink); font-weight: 800; z-index: 2; box-shadow: 3px 4px 0 var(--ink); }
+    .sticker.star { width: 86px; height: 86px; right: -22px; top: 20px; background: #ffe47a; clip-path: polygon(50% 0%,61% 30%,93% 10%,78% 42%,100% 55%,70% 65%,78% 98%,50% 78%,22% 98%,30% 65%,0% 55%,22% 42%,7% 10%,39% 30%); transform: rotate(10deg); font-size: .78rem; }
+    .sticker.round { width: 92px; height: 92px; border-radius: 50%; background: var(--pink); left: -30px; bottom: 48px; transform: rotate(-12deg); text-align: center; line-height: 1.25; }
+    .tape { position: absolute; top: -12px; left: 30%; width: 110px; height: 27px; background: #ffb3a4bb; transform: rotate(-5deg); }
+    section { padding: 68px 0; }
+    .section-head { text-align: center; margin-bottom: 34px; }
+    .kicker { color: var(--orange-dark); font-size: .75rem; font-weight: 800; letter-spacing: .18em; }
+    h2 { font-size: clamp(1.8rem, 4vw, 2.8rem); line-height: 1.25; margin: 8px 0 10px; letter-spacing: -.035em; }
+    .section-head p { margin: 0; color: var(--muted); }
+    .thanks { background: var(--green); position: relative; }
+    .thanks-card { background: var(--paper); border: 2px dashed #b8c99d; border-radius: 20px; padding: clamp(24px, 5vw, 46px); max-width: 800px; margin: auto; text-align: center; box-shadow: var(--shadow); }
+    .thanks-card .big { font-size: 2rem; }
+    .thanks-card p { margin-bottom: 0; }
+    .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .polaroid { background: #fff; padding: 10px 10px 38px; box-shadow: var(--shadow); position: relative; }
+    .polaroid:nth-child(1) { transform: rotate(-2deg); }
+    .polaroid:nth-child(2) { transform: rotate(2deg); margin-top: 22px; }
+    .polaroid:nth-child(3) { transform: rotate(-1deg); }
+    .polaroid img { display: block; width: 100%; aspect-ratio: 4 / 4.6; object-fit: cover; }
+    .polaroid figcaption { position: absolute; bottom: 7px; left: 8px; right: 8px; text-align: center; font-family: "Kosugi Maru", sans-serif; }
+    .gift-section { background: #fff0d2; }
+    .note { max-width: 780px; margin: 0 auto 24px; padding: 15px 18px; background: #fffdf7; border-left: 5px solid var(--orange); border-radius: 8px; }
+    .gift-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+    .gift { background: var(--paper); border: 2px solid var(--ink); border-radius: 16px; padding: 22px; position: relative; box-shadow: 5px 5px 0 var(--ink); }
+    .gift .rank { display: inline-block; background: var(--orange); border: 1px solid var(--ink); border-radius: 999px; padding: 3px 12px; font-size: .8rem; font-weight: 800; }
+    .gift h3 { font-size: 1.2rem; margin: 12px 0 8px; }
+    .gift p { margin: 0; font-size: .92rem; }
+    .gift.featured { background: #fff9d9; }
+    .gift .tiny { display: block; margin-top: 10px; font-size: .78rem; color: var(--muted); }
+    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; counter-reset: step; }
+    .step { background: #fff; border: 2px dashed var(--line); border-radius: 18px; padding: 22px; }
+    .step::before { counter-increment: step; content: "STEP " counter(step); display: inline-block; color: var(--orange-dark); font-weight: 800; font-size: .8rem; letter-spacing: .1em; }
+    .step h3 { margin: 7px 0; }
+    .step p { margin: 0; font-size: .9rem; }
+    .deadline { background: var(--ink); color: white; text-align: center; padding: 46px 20px; border-radius: 22px; }
+    .deadline .date { color: #ffe47a; font-size: clamp(1.8rem, 5vw, 3rem); font-weight: 800; line-height: 1.3; }
+    .deadline p { margin-bottom: 0; }
+    .footer { padding: 32px 16px; text-align: center; font-size: .78rem; color: var(--muted); }
+    .paw { color: var(--orange-dark); }
+    .hand-note { display: inline-block; padding: 5px 14px; background: #fff; border: 1px solid var(--line); transform: rotate(-2deg); font-family: "Kosugi Maru", sans-serif; }
+    @media (max-width: 760px) {
+      .hero { padding: 32px 0 48px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 28px; }
+      .hero-copy { text-align: center; }
+      .lead { margin-inline: auto; }
+      .hero-photo { width: min(440px, 88%); margin: 0 auto; }
+      .sticker.star { right: -18px; }
+      .gallery { grid-template-columns: repeat(2, 1fr); gap: 15px; }
+      .polaroid:nth-child(2) { margin-top: 16px; }
+      .polaroid:nth-child(3) { display: none; }
+      .gift-grid, .steps { grid-template-columns: 1fr; }
+      section { padding: 50px 0; }
+    }
+    @media (prefers-reduced-motion: no-preference) {
+      .gift, .polaroid { transition: transform .2s ease; }
+      .gift:hover { transform: translateY(-4px) rotate(-.5deg); }
+      .polaroid:hover { transform: rotate(0) scale(1.02); }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">🐾 REN'S THANK YOU CAMPAIGN · FINAL ROUND 🐾</div>
+  <header class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow">わんわん総選挙 FINAL 応援企画</span>
+        <h1>蓮からみんなへ<br><span class="orange">ありがとう！</span></h1>
+        <p class="lead">予選から応援してくれたみんなへ。蓮を見つけてくれて、投票してくれて、本当にありがとう！ 感謝の気持ちを込めて、ささやかなプレゼントを用意しました。</p>
+        <div class="period">📅 10/18 SUN — 10/31 SAT</div>
+      </div>
+      <div class="hero-photo">
+        <span class="tape"></span>
+        <img src="assets/ren-main.jpeg" alt="芝生の上で笑顔を見せる蓮">
+        <div class="photo-caption">Smile! You make Ren happy ♡</div>
+        <div class="sticker star">THANK<br>YOU!</div>
+        <div class="sticker round">みんな<br>だいすき<br>🐾</div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="thanks">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="kicker">A LITTLE NOTE</div>
+          <h2>予選応援ありがとう！</h2>
+          <p>みんなの応援が、蓮の大きな力になりました。</p>
+        </div>
+        <div class="thanks-card">
+          <div class="big">🧡 🐶 🧡</div>
+          <p>毎日投票してくれた人も、SNSで広めてくれた人も、蓮を応援してくれたみんなに感謝しています。<br>決勝も、無理のない範囲で一緒に楽しんでもらえたらうれしいです！</p>
+          <p class="hand-note">応援は、できる範囲でね！</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-head">
+          <div class="kicker">REN'S LITTLE ALBUM</div>
+          <h2>蓮の思い出アルバム</h2>
+          <p>いろんな蓮を、ちょっとだけおすそわけ。</p>
+        </div>
+        <div class="gallery">
+          <figure class="polaroid"><img src="assets/ren-dogrun.jpeg" alt="ドッグランで周りを見つめる蓮"><figcaption>お友だちといっしょ！</figcaption></figure>
+          <figure class="polaroid"><img src="assets/ren-snow.jpeg" alt="雪の中で遊ぶ蓮"><figcaption>雪の日も元気いっぱい</figcaption></figure>
+          <figure class="polaroid"><img src="assets/ren-hat.jpeg" alt="帽子をかぶった蓮"><figcaption>おさんぽスタイル 🧢</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="gift-section" id="gifts">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="kicker">GIFT CATALOG</div>
+          <h2>ありがとうのプレゼント</h2>
+          <p>蓮の最終順位に応じて、プレゼントをお届けします。</p>
+        </div>
+        <div class="note"><strong>🎁 参加条件：</strong>決勝期間中の無料投票・有料投票の合計が <strong>3,500ポイント以上</strong> の方が対象です。17LIVEのリスナーさんも、各SNSで応援してくれる方も参加できます。</div>
+        <div class="gift-grid">
+          <article class="gift featured">
+            <span class="rank">応援ポイント上位 1〜3位</span>
+            <h3>🏆 グランプリ・準グランプリなら</h3>
+            <p>蓮が掲載された『月刊わんこ』をプレゼント！</p>
+            <span class="tiny">上記の受賞に届かなかった場合：2027年 蓮のミニカレンダー＋オリジナルステッカー＋撮り下ろしポストカード</span>
+          </article>
+          <article class="gift">
+            <span class="rank">応援ポイント 4〜5位</span>
+            <h3>🍁 季節の蓮グッズセット</h3>
+            <p>季節の蓮グッズ＋オリジナルステッカー＋撮り下ろしポストカード</p>
+          </article>
+          <article class="gift">
+            <span class="rank">応援ポイント 6〜10位</span>
+            <h3>📸 蓮の写真セット</h3>
+            <p>オリジナルステッカー＋撮り下ろしポストカード</p>
+          </article>
+          <article class="gift">
+            <span class="rank">応援ポイント 11位〜</span>
+            <h3>💌 デジタルフォト</h3>
+            <p>今回のために撮影した、特別な蓮の写真をデータでお届け！</p>
+          </article>
+        </div>
+        <p style="text-align:center;font-size:.8rem;color:var(--muted);margin-top:22px;">※「応援ポイント」は、参加条件を満たした方の中で集計します。物理プレゼントは匿名配送でお送りします。</p>
+      </div>
+    </section>
+
+    <section id="join">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="kicker">HOW TO JOIN</div>
+          <h2>参加方法</h2>
+          <p>スクショを送ってくれたら応募完了！</p>
+        </div>
+        <div class="steps">
+          <article class="step">
+            <h3>決勝期間中に投票</h3>
+            <p>10/18〜10/31の投票ポイントを合計3,500ポイント以上にしてください。無料投票も合算できます。</p>
+          </article>
+          <article class="step">
+            <h3>投票画面をスクショ</h3>
+            <p>投票数やポイントが確認できる画面を保存してください。毎回送っても、まとめて送ってもOK！</p>
+          </article>
+          <article class="step">
+            <h3>SNSのDMで送信</h3>
+            <p>X・Instagram・ThreadsなどのDMで送ってください。17LIVEのDMは画像を送れないため対象外です。</p>
+          </article>
+        </div>
+        <div class="deadline" style="margin-top:28px;">
+          <div class="kicker" style="color:#ffd979;">SCREENSHOT SUBMISSION DEADLINE</div>
+          <div class="date">11/7（土）23:59まで</div>
+          <p>送信先に迷ったら、いつも蓮を応援しているSNSのDMから連絡してね。</p>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding-top:0;">
+      <div class="wrap">
+        <div class="thanks-card">
+          <div class="kicker">ONE LAST THING</div>
+          <h2>無理なく、楽しく、蓮と一緒に！</h2>
+          <p>応援してくれる気持ちが、なによりうれしいです。<br>いつも本当にありがとう！ <span class="paw">♥</span></p>
+          <div style="font-size:2rem;margin-top:10px;">🐾 🧡 🐾</div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">Made with love for Ren 🧡<br>※本ページは応援企画の案内ページです。</footer>
+</body>
+</html>
