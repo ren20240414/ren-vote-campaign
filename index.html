@@ -70,6 +70,14 @@
     .application-options { background: var(--ink); color: white; text-align: center; padding: 24px 20px; border-radius: 22px; }
     .application-options p { margin: 0; }
     .application-options .button-row { margin-top: 12px; }
+    .guide { margin: 52px auto; }
+    .guide details { background: var(--paper); border: 2px solid var(--line); border-radius: 18px; box-shadow: var(--shadow); overflow: hidden; }
+    .guide summary { padding: 20px 24px; cursor: pointer; font-size: 1.2rem; font-weight: 800; }
+    .guide summary::marker { color: var(--orange-dark); }
+    .guide-content { padding: 0 24px 24px; }
+    .guide-content ol { padding-left: 1.5em; }
+    .guide-content li { padding: 8px 0; }
+    .guide-content img { display: block; width: min(100%, 440px); height: auto; margin: 16px auto 24px; border-radius: 12px; box-shadow: var(--shadow); }
     .button-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 24px; }
     .mobile-break { display: none; }
     .button { display: inline-flex; justify-content: center; align-items: center; min-height: 48px; padding: 10px 20px; border: 2px solid var(--ink); border-radius: 999px; background: var(--orange); color: var(--ink); font-weight: 800; text-decoration: none; box-shadow: 3px 4px 0 var(--ink); transition: transform .2s ease; }
@@ -213,6 +221,23 @@
           </div>
         </div>
       </div>
+    </section>
+
+    <section class="guide wrap" aria-label="Patonアカウント登録案内">
+      <details>
+        <summary>Patonのアカウント登録方法</summary>
+        <div class="guide-content">
+          <p><a class="button" href="https://paton.jp/login/top" target="_blank" rel="noopener noreferrer">Patonの登録ページを開く</a></p>
+          <ol>
+            <li>上にある「LINEアカウントで登録」をクリックします。<img src="assets/paton-register-1.png" alt="Paton新規登録画面でLINEアカウントで登録を選ぶ"></li>
+            <li>「友だちに追加する」を押します。<img src="assets/paton-register-2.png" alt="Paton公式LINEを友だちに追加する画面"></li>
+            <li>LINEアプリに移動したら、「Paton」アカウントを友だち登録します。<img src="assets/paton-register-3.png" alt="LINEアプリでPatonを友だち追加"></li>
+            <li>LINEのトーク画面に届いたリンクをクリックします。<img src="assets/paton-register-4.png" alt="Patonのトーク画面に届いた登録リンク"></li>
+            <li>PatonのWebページに戻ったら、ニックネーム・メールアドレス・生年月日を入力します。ニックネームを入力しないとLINEの名前が表示されるのでご注意ください。<img src="assets/paton-register-5.png" alt="Patonのアカウント情報入力画面"></li>
+            <li>一番下までスクロールして「保存する」を押します。<img src="assets/paton-register-6.png" alt="Patonのプロフィール情報を保存する画面"></li>
+          </ol>
+        </div>
+      </details>
     </section>
 
     <section id="one-last-thing" style="padding-top:0;">
