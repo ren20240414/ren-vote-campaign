@@ -22,8 +22,8 @@
     .topbar { background: var(--orange); text-align: center; padding: 8px 14px; font-size: .78rem; font-weight: 800; letter-spacing: .08em; }
     .wrap { width: min(1080px, calc(100% - 32px)); margin: auto; }
     .hero { position: relative; padding: 48px 0 62px; overflow: hidden; background: radial-gradient(circle at 5% 12%, #ffe2a5 0 7%, transparent 7.5%), radial-gradient(circle at 94% 18%, #ffd3c6 0 6%, transparent 6.5%), var(--cream); }
-    .hero-grid { display: grid; grid-template-columns: 1fr .92fr; align-items: center; gap: 42px; }
-    h1 { font-size: clamp(2.6rem, 6vw, 5.2rem); line-height: 1.1; margin: 22px 0 18px; letter-spacing: -.055em; }
+    .hero-grid { display: grid; grid-template-columns: 1.12fr .88fr; align-items: center; gap: 42px; }
+    h1 { font-size: clamp(2.4rem, 4.8vw, 4.25rem); line-height: 1.1; margin: 22px 0 18px; letter-spacing: -.055em; }
     h1 .orange { color: var(--orange-dark); display: inline-block; }
     .lead { font-size: 1.03rem; max-width: 38em; }
     .hero-logo { display: block; width: min(310px, 78%); height: auto; margin: 0 auto 18px; }
@@ -52,6 +52,8 @@
     .gift-section { background: #fff0d2; }
     .note { max-width: 780px; margin: 0 auto 24px; padding: 15px 18px; background: #fffdf7; border-left: 5px solid var(--orange); border-radius: 8px; }
     .gift-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+    .gift.featured { grid-column: 1 / -1; }
+    .gift:not(.featured) { min-width: 0; }
     .gift { background: var(--paper); border: 2px solid var(--ink); border-radius: 16px; padding: 22px; position: relative; box-shadow: 5px 5px 0 var(--ink); }
     .gift .rank { display: inline-block; background: var(--orange); border: 1px solid var(--ink); border-radius: 999px; padding: 3px 12px; font-size: .8rem; font-weight: 800; }
     .gift h3 { font-size: 1.2rem; margin: 12px 0 8px; }
@@ -90,9 +92,13 @@
       #one-last-thing .polaroid:nth-child(2) { margin-top: 0; }
       #one-last-thing .polaroid:nth-child(3) { display: block; }
       .gift-grid, .steps { grid-template-columns: 1fr; }
+      .gift.featured { grid-column: auto; }
       .button-row { flex-direction: column; align-items: stretch; }
       .mobile-break { display: initial; }
       section { padding: 50px 0; }
+    }
+    @media (min-width: 761px) {
+      h1 { font-size: clamp(2.35rem, 4.2vw, 3.8rem); }
     }
     @media (prefers-reduced-motion: no-preference) {
       .gift, .polaroid { transition: transform .2s ease; }
