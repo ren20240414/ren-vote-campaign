@@ -70,6 +70,14 @@
     .application-options { background: var(--ink); color: white; text-align: center; padding: 24px 20px; border-radius: 22px; }
     .application-options p { margin: 0; }
     .application-options .button-row { margin-top: 12px; }
+    .guide { margin: 52px auto; }
+    .guide details { background: var(--paper); border: 2px solid var(--line); border-radius: 18px; box-shadow: var(--shadow); overflow: hidden; }
+    .guide summary { padding: 20px 24px; cursor: pointer; font-size: 1.2rem; font-weight: 800; }
+    .guide summary::marker { color: var(--orange-dark); }
+    .guide-content { padding: 0 24px 24px; }
+    .guide-content ol { padding-left: 1.5em; }
+    .guide-content li { padding: 8px 0; }
+    .guide-content img { display: block; width: min(100%, 440px); height: auto; margin: 16px auto 24px; border-radius: 12px; box-shadow: var(--shadow); }
     .button-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 24px; }
     .mobile-break { display: none; }
     .button { display: inline-flex; justify-content: center; align-items: center; min-height: 48px; padding: 10px 20px; border: 2px solid var(--ink); border-radius: 999px; background: var(--orange); color: var(--ink); font-weight: 800; text-decoration: none; box-shadow: 3px 4px 0 var(--ink); transition: transform .2s ease; }
@@ -143,6 +151,7 @@
           <div class="big">🧡 🐶 🧡</div>
           <p>予選で蓮に投票し、応援を届けてくださった皆さま、本当にありがとうございました。<br>皆さまの応援が、蓮の大きな力になりました。<br>決勝も蓮への応援をどうぞよろしくお願いいたします！</p>
           <div class="button-row"><a class="button" href="https://paton.jp/event/entrant/13617" target="_blank" rel="noopener noreferrer">蓮の決勝投票ページへ<br class="mobile-break">投票しに行く🐾</a></div>
+          <p><a href="#paton-guides">アカウント登録や投票方法はこちら！</a></p>
         </div>
       </div>
     </section>
@@ -213,6 +222,51 @@
           </div>
         </div>
       </div>
+    </section>
+
+    <section class="guide wrap" id="paton-guides" aria-label="Patonアカウント登録案内">
+      <div class="section-head">
+        <div class="kicker">PATON GUIDE</div>
+        <h2>各種操作ガイド</h2>
+      </div>
+      <details>
+        <summary>Patonのアカウント登録方法</summary>
+        <div class="guide-content">
+          <p><a class="button" href="https://paton.jp/login/top" target="_blank" rel="noopener noreferrer">Patonの登録ページを開く</a></p>
+          <ol>
+            <li>上にある「LINEアカウントで登録」をクリックします。<img src="assets/paton-register-1.png" alt="Paton新規登録画面でLINEアカウントで登録を選ぶ"></li>
+            <li>「友だちに追加する」を押します。<img src="assets/paton-register-2.png" alt="Paton公式LINEを友だちに追加する画面"></li>
+            <li>LINEアプリに移動したら、「Paton」アカウントを友だち登録します。<img src="assets/paton-register-3.png" alt="LINEアプリでPatonを友だち追加"></li>
+            <li>LINEのトーク画面に届いたリンクをクリックします。<img src="assets/paton-register-4.png" alt="Patonのトーク画面に届いた登録リンク"></li>
+            <li>PatonのWebページに戻ったら、ニックネーム・メールアドレス・生年月日を入力します。<br>ニックネームを入力しないとLINEの名前が表示されるのでご注意ください。<img src="assets/paton-register-5.png" alt="Patonのアカウント情報入力画面"></li>
+            <li>一番下までスクロールして「保存する」を押します。<img src="assets/paton-register-6.png" alt="Patonのプロフィール情報を保存する画面"></li>
+          </ol>
+        </div>
+      </details>
+      <details style="margin-top:18px;">
+        <summary>蓮への投票方法</summary>
+        <div class="guide-content">
+          <ol>
+            <li>蓮の投票ページにアクセスします。<br>事前にアカウント登録をしてください。登録方法は上の「Patonのアカウント登録方法」をご覧ください。<br><a class="button" href="https://paton.jp/event/entrant/13617" target="_blank" rel="noopener noreferrer">蓮の投票ページを開く</a></li>
+            <li>ページ下部にある「🎁ギフト」をクリックします。<img src="assets/paton-vote-1.png" alt="蓮のページ下部にあるギフトボタン"></li>
+            <li>ギフト欄を少しスクロールし、「1日1回無料！拍手」を選んで「🎁送信」をクリックします。<img src="assets/paton-vote-2.png" alt="無料の拍手ギフトを選び送信する画面"></li>
+            <li>確認画面が表示されたら「送信する」をクリックします。<img src="assets/paton-vote-3.png" alt="拍手ギフトの送信確認画面"></li>
+            <li>応援ありがとう企画への応募に必要なスクリーンショットは、この送信完了画面です。画面を保存してください。<img src="assets/paton-vote-4.png" alt="拍手ギフト送信完了画面のスクリーンショット見本"></li>
+          </ol>
+        </div>
+      </details>
+      <details style="margin-top:18px;">
+        <summary>コインのチャージ方法</summary>
+        <div class="guide-content">
+          <ol>
+            <li>右上の「≡」をクリックします。<img src="assets/paton-charge-1.png" alt="Paton画面右上のメニュー"></li>
+            <li>メニューの「チャージ」をクリックします。<img src="assets/paton-charge-2.png" alt="Patonメニューのチャージ項目"></li>
+            <li>チャージ画面を下にスクロールして、チャージする金額を選択します。<img src="assets/paton-charge-3.png" alt="チャージ金額の選択画面"></li>
+            <li>購入金額を確認して「購入」をクリックします。<img src="assets/paton-charge-4.png" alt="コイン購入金額の確認画面"></li>
+            <li>クレジットカード情報を入力して決済します。<img src="assets/paton-charge-5.png" alt="クレジットカード情報の入力画面"></li>
+          </ol>
+        </div>
+      </details>
     </section>
 
     <section id="one-last-thing" style="padding-top:0;">
