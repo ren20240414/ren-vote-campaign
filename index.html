@@ -86,7 +86,9 @@
       .sticker.star { right: -18px; }
       .gallery { grid-template-columns: repeat(2, 1fr); gap: 15px; }
       .polaroid:nth-child(2) { margin-top: 16px; }
-      .polaroid:nth-child(3) { display: none; }
+      #one-last-thing .gallery { grid-template-columns: 1fr; gap: 15px; }
+      #one-last-thing .polaroid:nth-child(2) { margin-top: 0; }
+      #one-last-thing .polaroid:nth-child(3) { display: block; }
       .gift-grid, .steps { grid-template-columns: 1fr; }
       .button-row { flex-direction: column; align-items: stretch; }
       .mobile-break { display: initial; }
