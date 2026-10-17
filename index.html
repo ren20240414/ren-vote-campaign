@@ -63,9 +63,10 @@
     .step::before { counter-increment: step; content: "STEP " counter(step); display: inline-block; color: var(--orange-dark); font-weight: 800; font-size: .8rem; letter-spacing: .1em; }
     .step h3 { margin: 7px 0; }
     .step p { margin: 0; font-size: .9rem; }
-    .deadline { background: var(--ink); color: white; text-align: center; padding: 46px 20px; border-radius: 22px; }
-    .deadline .date { color: #ffe47a; font-size: clamp(1.8rem, 5vw, 3rem); font-weight: 800; line-height: 1.3; }
-    .deadline p { margin-bottom: 0; }
+    .application-note { color: #d96d00 !important; }
+    .application-options { background: var(--ink); color: white; text-align: center; padding: 24px 20px; border-radius: 22px; }
+    .application-options p { margin: 0; }
+    .application-options .button-row { margin-top: 12px; }
     .button-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 24px; }
     .button { display: inline-flex; justify-content: center; align-items: center; min-height: 48px; padding: 10px 20px; border: 2px solid var(--ink); border-radius: 999px; background: var(--orange); color: var(--ink); font-weight: 800; text-decoration: none; box-shadow: 3px 4px 0 var(--ink); transition: transform .2s ease; }
     .button:hover { transform: translateY(-2px); }
@@ -171,7 +172,7 @@
           <div class="kicker">HOW TO JOIN</div>
           <h2>参加方法</h2>
           <p>投票を確認できるスクリーンショットを添えて申請してください。</p>
-          <p><strong>応募締切：2026年11月7日（土）23:59まで</strong></p>
+          <p class="application-note"><strong>応募締切：2026年11月7日（土）23:59まで</strong></p>
         </div>
         <div class="steps">
           <article class="step">
@@ -187,7 +188,7 @@
             <p>XまたはInstagramのDM、もしくは下のGoogleフォームから申請してください。<br>投票期間中に都度申請してもまとめて申請しても良いです。</p>
           </article>
         </div>
-        <div class="deadline" style="margin-top:28px;">
+        <div class="application-options" style="margin-top:20px;">
           <p>申請方法を選んで、スクリーンショットを添えてお送りください。</p>
           <div class="button-row">
             <a class="button" href="https://x.com/ren20240414" target="_blank" rel="noopener noreferrer">XのDMで申請する</a>
