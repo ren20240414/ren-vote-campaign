@@ -27,8 +27,8 @@
     h1 .orange { color: var(--orange-dark); display: inline-block; }
     .lead { font-size: 1.03rem; max-width: 38em; }
     .hero-logo { display: block; width: min(310px, 78%); height: auto; margin: 0 auto 18px; }
-    .hero-photo { position: relative; transform: rotate(2deg); background: white; padding: 12px 12px 44px; box-shadow: 0 16px 35px #4e321b30; border: 1px solid #eee1ce; }
-    .hero-photo img { width: 100%; display: block; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 36%; }
+    .hero-photo { position: relative; width: min(100%, 470px); justify-self: center; transform: rotate(2deg); background: white; padding: 12px 12px 44px; box-shadow: 0 16px 35px #4e321b30; border: 1px solid #eee1ce; }
+    .hero-photo img { width: 100%; display: block; aspect-ratio: 1; object-fit: cover; object-position: center 36%; }
     .photo-caption { position: absolute; bottom: 9px; left: 12px; right: 12px; text-align: center; font-family: "Kosugi Maru", sans-serif; font-size: 1rem; }
     .sticker { position: absolute; display: grid; place-items: center; border: 2px solid var(--ink); font-weight: 800; z-index: 2; box-shadow: 3px 4px 0 var(--ink); }
     .sticker.round { width: 92px; height: 92px; border-radius: 50%; background: var(--pink); left: -30px; bottom: 48px; transform: rotate(-12deg); text-align: center; line-height: 1.25; }
@@ -51,8 +51,8 @@
     .polaroid figcaption { position: absolute; bottom: 7px; left: 8px; right: 8px; text-align: center; font-family: "Kosugi Maru", sans-serif; }
     .gift-section { background: #fff0d2; }
     .note { max-width: 780px; margin: 0 auto 24px; padding: 15px 18px; background: #fffdf7; border-left: 5px solid var(--orange); border-radius: 8px; }
-    .gift-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
-    .gift.featured { grid-column: 1 / -1; }
+    .gift-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+    .gift.featured { grid-column: auto; }
     .gift:not(.featured) { min-width: 0; }
     .gift { background: var(--paper); border: 2px solid var(--ink); border-radius: 16px; padding: 22px; position: relative; box-shadow: 5px 5px 0 var(--ink); }
     .gift .rank { display: inline-block; background: var(--orange); border: 1px solid var(--ink); border-radius: 999px; padding: 3px 12px; font-size: .8rem; font-weight: 800; }
