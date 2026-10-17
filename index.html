@@ -51,9 +51,10 @@
     .polaroid figcaption { position: absolute; bottom: 7px; left: 8px; right: 8px; text-align: center; font-family: "Kosugi Maru", sans-serif; }
     .gift-section { background: #fff0d2; }
     .note { max-width: 780px; margin: 0 auto 24px; padding: 15px 18px; background: #fffdf7; border-left: 5px solid var(--orange); border-radius: 8px; }
-    .gift-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
-    .gift.featured { grid-column: auto; }
+    .gift-grid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 18px; }
+    .gift.featured { grid-column: 2 / span 4; }
     .gift:not(.featured) { min-width: 0; }
+    .gift:not(.featured) { grid-column: span 2; }
     .gift { background: var(--paper); border: 2px solid var(--ink); border-radius: 16px; padding: 22px; position: relative; box-shadow: 5px 5px 0 var(--ink); }
     .gift .rank { display: inline-block; background: var(--orange); border: 1px solid var(--ink); border-radius: 999px; padding: 3px 12px; font-size: .8rem; font-weight: 800; }
     .gift h3 { font-size: 1.2rem; margin: 12px 0 8px; }
@@ -92,7 +93,7 @@
       #one-last-thing .polaroid:nth-child(2) { margin-top: 0; }
       #one-last-thing .polaroid:nth-child(3) { display: block; }
       .gift-grid, .steps { grid-template-columns: 1fr; }
-      .gift.featured { grid-column: auto; }
+      .gift.featured, .gift:not(.featured) { grid-column: auto; }
       .button-row { flex-direction: column; align-items: stretch; }
       .mobile-break { display: initial; }
       section { padding: 50px 0; }
