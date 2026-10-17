@@ -74,6 +74,9 @@
     .mobile-break { display: none; }
     .button { display: inline-flex; justify-content: center; align-items: center; min-height: 48px; padding: 10px 20px; border: 2px solid var(--ink); border-radius: 999px; background: var(--orange); color: var(--ink); font-weight: 800; text-decoration: none; box-shadow: 3px 4px 0 var(--ink); transition: transform .2s ease; }
     .button:hover { transform: translateY(-2px); }
+    .application-options .button { background: white; }
+    .application-options .button:hover,
+    .application-options .button:active { background: var(--orange); }
     .button.secondary { background: white; }
     .button.disabled { background: #eee5d9; color: var(--muted); cursor: not-allowed; }
     .note ul { margin: 8px 0 0; padding-left: 1.3em; }
@@ -95,6 +98,8 @@
       .gift-grid, .steps { grid-template-columns: 1fr; }
       .gift.featured, .gift:not(.featured) { grid-column: auto; }
       .button-row { flex-direction: column; align-items: stretch; }
+      .application-options .button:hover { background: white; transform: none; }
+      .application-options .button:active { background: var(--orange); transform: scale(.98); }
       .mobile-break { display: initial; }
       section { padding: 50px 0; }
     }
