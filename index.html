@@ -68,6 +68,7 @@
     .application-options p { margin: 0; }
     .application-options .button-row { margin-top: 12px; }
     .button-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 24px; }
+    .mobile-break { display: none; }
     .button { display: inline-flex; justify-content: center; align-items: center; min-height: 48px; padding: 10px 20px; border: 2px solid var(--ink); border-radius: 999px; background: var(--orange); color: var(--ink); font-weight: 800; text-decoration: none; box-shadow: 3px 4px 0 var(--ink); transition: transform .2s ease; }
     .button:hover { transform: translateY(-2px); }
     .button.secondary { background: white; }
@@ -88,6 +89,7 @@
       .polaroid:nth-child(3) { display: none; }
       .gift-grid, .steps { grid-template-columns: 1fr; }
       .button-row { flex-direction: column; align-items: stretch; }
+      .mobile-break { display: initial; }
       section { padding: 50px 0; }
     }
     @media (prefers-reduced-motion: no-preference) {
@@ -126,7 +128,7 @@
         <div class="thanks-card">
           <div class="big">🧡 🐶 🧡</div>
           <p>予選で蓮に投票し、応援を届けてくださった皆さま、本当にありがとうございました。<br>皆さまの応援が、蓮の大きな力になりました。<br>決勝も蓮への応援をどうぞよろしくお願いいたします！</p>
-          <div class="button-row"><a class="button" href="https://paton.jp/event/entrant/13617" target="_blank" rel="noopener noreferrer">蓮の決勝投票ページへ<br>投票しに行く🐾</a></div>
+          <div class="button-row"><a class="button" href="https://paton.jp/event/entrant/13617" target="_blank" rel="noopener noreferrer">蓮の決勝投票ページへ<br class="mobile-break">投票しに行く🐾</a></div>
         </div>
       </div>
     </section>
